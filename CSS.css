@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+body {
+    text-align: center;
+    background-color: #121212;
+    color: aliceblue;
+    overflow-y: hidden;
+}
+
+@font-face {
+    font-family: 'SevenSegment';
+    src: url('./SevenSegment.ttf') format('truetype');
+}
+
+#stopwatch {
+    font-size: 130px;
+    font-family: 'SevenSegment', sans-serif;
+    padding: 50px;
+    margin: 50px;
+}
+
+#lap-times {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+.button {
+    color: aliceblue;
+    background-color: #222;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    text-align: center;
+    margin-right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+}
+
+.button:hover {
+    background-color: #333;
+}
+
+.button svg {
+    display: inline;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 0.75rem;
+    color: aliceblue;
+}
+
+.button:focus svg {
+    animation: spin_357 0.5s linear;
+}
+
+@keyframes spin_357 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.scrollable-list {
+    max-height: 300px;
+    max-width: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: white;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: black;
+    -webkit-transition: all 300ms ease-in-out;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.2);
+}
